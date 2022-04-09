@@ -1,0 +1,395 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.2rem;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 400;
+}
+:root{
+    --blue-text-color: #5f6e92;
+    --text-color: #183153;
+}
+.grid{
+    width: 1120px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Header */
+
+.header{
+    display: flex;
+    height: 76px;
+    align-items: center;
+}
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-nav__list{
+    display: flex;
+    list-style: none;
+    margin: auto 0;
+}
+.header-nav__item{
+    margin-right: 16px;
+    padding: 10px 16px;
+}
+.header-nav__item-link{
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    text-decoration: none;
+    color: var(--blue-text-color);
+}
+.header-nav__item-link:hover{
+    color: #538dd7;
+}
+.header-nav__item-flag{
+    font-size: 2.4rem;
+    margin-right: 32px;
+}
+.header-nav__item-search{
+    font-size: 1.6rem;
+}
+.header-nav__signin{
+    font-size: 2.5rem;
+    display: block;
+    cursor: pointer;
+    display: flex;
+    padding: 10px;
+    position: relative;
+}
+.header-nav__signin-link{
+    color: var(--blue-text-color); 
+    text-decoration: none;
+    margin: auto;
+}
+.header-nav__signin-run{
+    display: none;
+}
+.header-nav__signin:hover .header-nav__signin-run{
+    color: #538dd7;
+    display: block;
+}
+.header-nav__signin:hover .header-nav__signin-arrow{
+    display: none;
+}
+.header-nav__signin:hover .header-nav__signin-text{
+    display: block;
+}
+@keyframes slide{
+    from{
+        opacity: 0.5;
+        transform: translateX(0);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(-3px);
+    }
+
+}
+.header-nav__signin-text{
+    position: absolute;
+    top: 8px;
+    left: -80px;
+    width: 60px;
+    height: 30px;
+    font-size: 1.3rem;
+    background-color: var(--text-color);
+    color: #fff;
+    box-sizing: border-box;
+    border-radius: 2px;
+    text-align: center;
+    padding-top: 10px;
+    display: none;
+    animation: slide ease 0.5s forwards;
+}
+.header-nav__signin-text::after{
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: -10px;
+    border-style: solid;
+    border-width: 5px 5px;
+    border-color: transparent transparent transparent var(--text-color);
+}
+
+/* container */
+.container{
+    margin-bottom: 120px;
+}
+.container-heading{
+    width: 650px;
+    height: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
+}
+.container-heading h1{
+    color: var(--text-color);
+    font-size: 5rem;
+    text-align: center;
+    text-justify: 1;
+    line-height: 5rem;
+    font-weight: 500;
+}
+.container-heading p{
+    font-size: 2.2rem;
+    color: var(--text-color);
+    margin: 50px 0 45px;
+    line-height: 2.4rem;
+    text-align: center;
+    font-weight: 300;
+}
+.container-heading__btn{
+    height: 72px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin: 0 75px;
+}
+.container-heading__btn-item{
+    padding: 15px 32px;
+    border-style: solid;
+    border-width: 2px 2px 8px 2px;
+    border-radius: 14px;
+    border-color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin: 5px;
+}
+.container-heading__btn-item:hover{
+    border-color: #091320;
+    color: #091320;
+}
+.container-heading__btn-icon{
+    padding-right: 12px;
+}
+.container-div__video{
+    width: 100%;
+    text-align: center;
+}
+.container-video{
+    height: 500px;
+    width: 890px;
+    align-items: center;
+    margin: auto;
+    border-radius: 10px;
+}
+.container-introduce{
+    display: flex;
+    margin-top: 100px;
+}
+.container-introduce__news{
+    flex: 1;
+    padding: 0 96px 0 8px;
+}
+.container-introduce__news h1{
+    color: #538dd7;
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+    position: relative;
+}
+.container-introduce__news>h1:hover .container-introduce__news-icon{
+    display: inline-block;
+}
+.container-introduce__news-icon{
+    position: absolute;
+    display: inline-block;
+    left: -40px;
+    color: #538dd7;
+    font-size: 2rem;
+    display: none;
+}
+.container-introduce__news-icon::after{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 15px;
+}
+.container-introduce__news-icon:hover{
+    color: rgba(83, 141, 215, 0.7);
+}
+.container-introduce__news h2{
+    margin-top: 48px;
+    font-size: 3.4rem;
+    color: var(--text-color);
+    line-height: 3.4rem;
+    font-weight: 500;
+}
+.container-introduce__news h3{
+    font-size: 1.9rem;
+    margin-top: 36px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+.container-introduce__news p{
+    color: var(--text-color);
+    margin-top: 22px;
+    font-size: 1.7rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+}
+.introduce__news-link{
+    display: flex;
+    margin-top: 34px;
+    justify-content: space-between;
+}
+.introduce__news-link--wrap{
+    display: flex;
+    flex-flow: column;
+}
+.introduce__news-link--item{
+    font-size: 1.7rem;
+    margin-bottom: 24px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.introduce__news-link--item:hover{
+    color: #538dd7;
+}
+.introduce__news-link--icon{
+    padding-right: 16px;
+    font-size: 2.4rem;
+    color: #538dd7;
+}
+.container-introduce__illustration{
+    padding: 0 8px;
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+}
+.introduce__illustration-wrap1{
+    height: 250px;
+    width: 535px;
+    position: relative;
+    margin-bottom: 6px;
+}
+.introduce__illustration--first-item{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-width: 1px 1px 5px 1px;
+    border-style: solid;
+    border-color: transparent transparent #c3c6d1 transparent;
+    border-radius: 15px;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+.introduce__illustration--first-item span{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin: auto;
+
+}
+.introduce__illustration-wrap2{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.introduce__illustration-item{
+    width: 260px;
+    height: 180px;
+    margin-top: 40px;
+    display: flex;
+    flex-flow: column;
+    border-width: 1px 1px 5px 1px;
+    border-style: solid;
+    border-color: transparent transparent #c3c6d1 transparent;
+    border-radius: 15px;
+    overflow: hidden;
+    text-decoration: none;
+}
+.introduce__illustration-item span{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin: auto;
+}
+.introduce__illustration--first-item-hover:hover{
+    border-color: #fab005;
+}
+.introduce__illustration-item-hover1:hover{
+    border-color: #9c36b5;
+}
+.introduce__illustration-item-hover2:hover{
+    border-color: #146ebe;
+}
+.introduce__illustration-item-hover3:hover{
+    border-color: #0ca678;
+}
+.introduce__illustration-item-hover4:hover{
+    border-color: #6741d9;
+}
+/* footer */
+.footer{
+    background-color: var(--text-color);
+    height: 308px;
+}
+.footer-grid{
+    position: relative;
+}
+.footer_wrap{
+    position: absolute;
+    display: flex;
+    margin: 40px 0;
+    width: 100%;
+}
+.footer__left{
+    flex: 1;
+}
+.footer__left-icon{
+    color: white;
+    font-size: 2rem;
+}
+.footer__left-header{
+    color: white;
+    margin-top: 40px;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+}
+.footer__left-text{
+    color: white;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.footer__right{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+.footer__heading{
+    color: #5b697d;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    margin-bottom: 15px;
+}
+.footer__right-list{
+    list-style: none;
+}
+.footer__right-item--link{
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color: white;
+    text-decoration: none;
+    outline: none;
+}
+.footer__right-item--link:hover{
+    color: #146ebe;
+}
